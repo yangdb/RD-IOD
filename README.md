@@ -1,5 +1,3 @@
-# RD-IOD
+# RD-IOD: Two-Level Residual-Distillation-Based Triple Network for Incremental Object Detection
 
-## models
-https://pan.baidu.com/s/1Op7KYk3biiQjQSrv_kcU-w 
- 
+The code is built on top of https://github.com/jwyang/faster-rcnn.pytorch.git 
