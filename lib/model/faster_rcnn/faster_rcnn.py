@@ -70,12 +70,12 @@ class _fasterRCNN(nn.Module):
             rpn_loss_cls = 0
             rpn_loss_bbox = 0
             # print(gt_boxes.shape)
-            if gt_boxes.shape[1]>1 and num_boxes>0:
-                #print(num_boxes)
-                gt_boxes_append = gt_boxes.new(gt_boxes.size()).zero_()
-                gt_boxes_append[:, :, 1:5] = gt_boxes[:, :, :4]
-                rois = gt_boxes_append[:, :num_boxes]
-                rois_label = Variable(gt_boxes[:,:num_boxes,-1].view(-1).long())
+            # if gt_boxes.shape[1]>1 and num_boxes>0:
+            #     #print(num_boxes)
+            #     gt_boxes_append = gt_boxes.new(gt_boxes.size()).zero_()
+            #     gt_boxes_append[:, :, 1:5] = gt_boxes[:, :, :4]
+            #     rois = gt_boxes_append[:, :num_boxes]
+            #     rois_label = Variable(gt_boxes[:,:num_boxes,-1].view(-1).long())
 
         rois = Variable(rois)
         # do roi pooling based on predicted rois
